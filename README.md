@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Raspberry Pi Logo](https://raw.githubusercontent.com/raspberrypi/documentation/master/documentation/asciidoc/images/R-Pi-Logo-Reg-SCREEN.png)
+<img src="https://www.raspberrypi.com/app/uploads/2022/02/COLOUR-Raspberry-Pi-Symbol-Registered.png" width="200" alt="Raspberry Pi Logo">
 
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
