@@ -122,6 +122,69 @@
             filter: grayscale(0%);
             opacity: 1;
         }
+
+        /* Download button styles */
+        .download-btn {
+            position: relative;
+            overflow: hidden;
+            padding-right: 60px !important;
+        }
+
+        .download-btn .download-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 45px;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover .download-icon {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .download-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Download Modal */
+        .download-modal .modal-content {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .download-info {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .download-info i {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .download-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .download-details p {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -179,7 +242,13 @@
                         </div>
                         <h4>Operating System</h4>
                         <p>Download the latest Raspberry Pi OS</p>
-                        <a href="#" class="btn btn-primary">Download</a>
+                        <button class="btn btn-primary download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal1">
+                            Download
+                            <span class="download-icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <div class="download-progress"></div>
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -189,7 +258,13 @@
                         </div>
                         <h4>SDK & Tools</h4>
                         <p>Development tools and software kits</p>
-                        <a href="#" class="btn btn-primary">Download</a>
+                        <button class="btn btn-primary download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal2">
+                            Download
+                            <span class="download-icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <div class="download-progress"></div>
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
@@ -199,7 +274,13 @@
                         </div>
                         <h4>Documentation</h4>
                         <p>Guides and technical documentation</p>
-                        <a href="#" class="btn btn-primary">Download</a>
+                        <button class="btn btn-primary download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal3">
+                            Download
+                            <span class="download-icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <div class="download-progress"></div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -256,6 +337,91 @@
         </div>
     </section>
 
+    <!-- Download Modals -->
+    <div class="modal fade" id="downloadModal1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Download Raspberry Pi OS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="download-info">
+                        <i class="fas fa-download"></i>
+                        <h4>Raspberry Pi OS</h4>
+                        <div class="download-details">
+                            <p><strong>Version:</strong> 2024.1.0</p>
+                            <p><strong>Size:</strong> 8GB</p>
+                            <p><strong>Format:</strong> IMG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="downloads/raspberry-pi-os.txt" download class="btn btn-primary" onclick="simulateDownload(this, 1)">
+                        Start Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="downloadModal2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Download SDK & Tools</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="download-info">
+                        <i class="fas fa-code"></i>
+                        <h4>Development Kit</h4>
+                        <div class="download-details">
+                            <p><strong>Version:</strong> 2024.1.0</p>
+                            <p><strong>Size:</strong> 2.5GB</p>
+                            <p><strong>Format:</strong> ZIP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="downloads/raspi-sdk.txt" download class="btn btn-primary" onclick="simulateDownload(this, 2)">
+                        Start Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="downloadModal3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Download Documentation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="download-info">
+                        <i class="fas fa-book"></i>
+                        <h4>Technical Documentation</h4>
+                        <div class="download-details">
+                            <p><strong>Version:</strong> 2024.1.0</p>
+                            <p><strong>Size:</strong> 150MB</p>
+                            <p><strong>Format:</strong> PDF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="downloads/documentation.pdf" download class="btn btn-primary" onclick="simulateDownload(this, 3)">
+                        Start Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
@@ -278,6 +444,42 @@
             duration: 800,
             once: true
         });
+    </script>
+
+    <!-- Download simulation -->
+    <script>
+        function simulateDownload(button, downloadId) {
+            // Get the progress bar for the main download button
+            const mainButton = document.querySelector(`[data-bs-target="#downloadModal${downloadId}"]`);
+            const progressBar = mainButton.querySelector('.download-progress');
+            
+            // Disable the download button
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Downloading...';
+            
+            // Simulate download progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 5;
+                progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    button.innerHTML = '<i class="fas fa-check me-2"></i>Downloaded';
+                    setTimeout(() => {
+                        const modal = bootstrap.Modal.getInstance(document.querySelector(`#downloadModal${downloadId}`));
+                        modal.hide();
+                        
+                        // Reset the button after modal is closed
+                        setTimeout(() => {
+                            button.disabled = false;
+                            button.innerHTML = 'Start Download';
+                            progressBar.style.width = '0';
+                        }, 500);
+                    }, 1000);
+                }
+            }, 100);
+        }
     </script>
 </body>
 </html>
