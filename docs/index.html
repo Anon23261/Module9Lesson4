@@ -391,7 +391,7 @@
                         </div>
                         <h3 class="h4 mb-3">IoT Development</h3>
                         <p class="text-muted mb-4">Custom IoT solutions powered by Raspberry Pi for your smart projects.</p>
-                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                        <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#iotModal">Learn More</button>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -401,7 +401,7 @@
                         </div>
                         <h3 class="h4 mb-3">Robotics</h3>
                         <p class="text-muted mb-4">Build amazing robots and automation systems with Raspberry Pi.</p>
-                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                        <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#roboticsModal">Learn More</button>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
@@ -411,7 +411,7 @@
                         </div>
                         <h3 class="h4 mb-3">Education</h3>
                         <p class="text-muted mb-4">Learn programming and electronics with our educational kits.</p>
-                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                        <button class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#educationModal">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -488,6 +488,124 @@
             <p class="mb-0">&copy; 2024 RasPi Solutions. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Service Modals -->
+    <div class="modal fade" id="iotModal" tabindex="-1" aria-labelledby="iotModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="iotModalLabel">IoT Development Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-3">What We Offer:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Custom IoT Solution Development</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Sensor Integration</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Real-time Data Monitoring</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Cloud Connectivity</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Remote Device Management</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Technologies Used:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-microchip me-2"></i>Raspberry Pi</li>
+                                <li class="mb-2"><i class="fas fa-wifi me-2"></i>WiFi & Bluetooth</li>
+                                <li class="mb-2"><i class="fas fa-cloud me-2"></i>Cloud Platforms</li>
+                                <li class="mb-2"><i class="fas fa-code me-2"></i>Python & Node.js</li>
+                                <li class="mb-2"><i class="fas fa-database me-2"></i>IoT Databases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="roboticsModal" tabindex="-1" aria-labelledby="roboticsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="roboticsModalLabel">Robotics Solutions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Our Robotics Services:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Custom Robot Design</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Automation Systems</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Computer Vision Integration</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Motion Control</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>AI & Machine Learning</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Technologies Used:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-robot me-2"></i>Servo Motors</li>
+                                <li class="mb-2"><i class="fas fa-camera me-2"></i>Computer Vision</li>
+                                <li class="mb-2"><i class="fas fa-brain me-2"></i>TensorFlow</li>
+                                <li class="mb-2"><i class="fas fa-cogs me-2"></i>ROS</li>
+                                <li class="mb-2"><i class="fas fa-microchip me-2"></i>Arduino Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="educationModalLabel">Educational Programs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Educational Offerings:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Starter Kits</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Workshop Programs</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Online Courses</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Project Support</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Certification Programs</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Learning Topics:</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-code me-2"></i>Programming Basics</li>
+                                <li class="mb-2"><i class="fas fa-microchip me-2"></i>Electronics</li>
+                                <li class="mb-2"><i class="fas fa-project-diagram me-2"></i>IoT Projects</li>
+                                <li class="mb-2"><i class="fas fa-robot me-2"></i>Robotics Fundamentals</li>
+                                <li class="mb-2"><i class="fas fa-graduation-cap me-2"></i>Advanced Topics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
